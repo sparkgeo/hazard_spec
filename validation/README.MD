@@ -1,0 +1,1 @@
+This folder should contain the necessary code to validate any schemas created.
