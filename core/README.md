@@ -1,15 +1,43 @@
 # OS-C Hazard Core Specification
 
-This specification describes the core data and metadata properties for both at the Record and Feature level.
-The atomic unit is a OGC Record as described here: [OGC Records]([https://docs.ogc.org/DRAFTS/20-004.html#clause-record-core) and [schema](https://github.com/opengeospatial/ogcapi-records/blob/master/core/openapi/schemas/recordJSON.yaml).
+A hazard is a top level grouping that captures indicators and models. A Hazard contains an array of link objects to other objects and can include additional metadata to describe contained objects. See [HAZARD.md](https://github.com/os-climate/hazard/blob/main/HAZARD.md#introduction-to-data-sets-for-hazard-models) for a succint description of Hazard models
 
-- A Record referes to a specific hazard that encompasses one or more hazard indicators.
-- A Feature is a single field geometry with additional properties.
+> Introduction to data sets for hazard models
+Hazards come in two varieties:
+>
+> 1. Acute hazards: events, for example heat waves, inundations (floods) and hurricanes, and
+>
+> 2. Chronic hazards: long-term shifts in climate parameters such as average temperature, sea-level or water stress indices.
+>
+> See methodology document for more details.
+>
+> Two important types of model used in the assessment of the vulnerability of an asset (natural or financial) to an acute hazard are:
+>
+> 1. Event-based models, where the model provides a large number of individual simulated events, actual or plausible, and
+>
+> 2. Return-period-based models, where the model rather provides the statistic properties of the ensemble of events.
 
-A hazard can be of three kinds:
+It is fully described in the [core specification](./core-spec.md) and [core schema](./schema/schema.json)
 
-- Acute
-- Chronic
-- Unknown
+The specification is currently filtered for the following hazard types:
 
-Hazards exist over a space and time, so geojson is used as a foundational building blog for this specification. By default, we have hazards existing any where, anytime. In accordance with best practices from other specificaitons, 
+## Allowed Hazard Types
+
+| Hazard Type          |
+|----------------------|
+| ChronicHeat          |
+| AirTemperature       |
+| ChronicWind          |
+| CoastalInundation    |
+| CombinedInundation   |
+| Drought              |
+| Fire                 |
+| Hail                 |
+| Hazard               |
+| Inundation           |
+| PluvialInundation    |
+| Precipitation        |
+| RiverineInundation   |
+| WaterRisk            |
+| WaterTemperature     |
+| Wind                 |

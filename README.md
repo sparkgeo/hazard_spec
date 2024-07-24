@@ -1,6 +1,12 @@
-# OS-C Hazard Specification
+# Hazard Specification
 
-The OS-C project is  <describe OS-C project>. The Hazard specification is a foundational aspect of collaboration and data interoperability which supports the OS-C mission and objectives. The aim is to accelerate adoption of standard physical risk metrics. The description of Hazard can be found [here](https://github.com/os-climate/hazard/blob/main/HAZARD.md).
+## About
+
+The Hazared specification project is a suite of specifications that aim to standardize how hazard indicator data are queried and structuded. The project aims to align hazard indicators froe the open source community, government, and academics to provide a unified understanding of hazard identification standardizatiopn.
+
+**The aim is to accelerate adoption of standard physical risk metrics.**
+
+The Hazard Catalog specification is a foundational aspect of collaboration and data interoperability which supports the OS-C mission and objectives and supports the EODH project. The description of Hazard can be found [here](https://github.com/os-climate/hazard/blob/main/HAZARD.md).
 
 This repository contains the core specification, including the data schema.
 
@@ -10,11 +16,11 @@ See changelog for continuous updates
 
 The specification in this repo contains three parts:
 
-- Core Specification
+- [Core Specification](core/README.md)
 - Geojson Encoding
 - Indicators
 
-To integrate 3rd party indicators, we provide extensions
+To integrate 3rd party indicators, we provide extensions to the indicator schema and specification.
 
 ## Extensions
 

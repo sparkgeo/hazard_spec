@@ -1,0 +1,29 @@
+{
+  "hazard_version": "0.0.1",
+  "id": "OS-C Chronic Heat",
+  "description": "Long-term increase in temperature.",
+  "hazard_kind": "chronic",
+  "hazard_type": "ChronicHeat",
+  "name": "Chronic Heat",    
+  "links": [
+    {
+      "href": "./hazard-example.json",
+      "rel": "self",
+      "type": "application/json",
+      "title": "OS-C Chronic Heat example"
+    },
+    {
+      "href": "./indicator-example.json",
+      "rel": "indicator",
+      "type": "application/json",
+      "title": "mean/degree/days/above/32c"
+    },
+    {
+      "href": "./indicator-example2.json",
+      "rel": "indicator",
+      "type": "application/json",
+      "title": "mean/degree/days/above/25c"
+    }    
+  ],
+  "details": null
+}

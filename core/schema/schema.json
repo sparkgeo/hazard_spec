@@ -1,110 +1,66 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "./schema.json",
-    "title": "Hazards Schema",
+    "title": "Hazard Type Schema",
     "type": "object",
-    "required": ["hazards"],
+    "required": ["hazard_version", "id", "hazard_kind", "name", "description"],
     "description": "This object represents the metadata for hazards that exist.",
-    "allOf": [
-        {
-            "$ref": "#/definitions/core"
-        }
-    ],    
-    "definitions": {
-        "core": {
-            "allOf": [
-                {
-                    "$ref": "https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordJSON.yaml"
-                },
-                {
-                    "type": "object",
-                    "required": [
-                        "hazard_version",
-                        "id",
-                        "links",
-                        "properties"
-                    ],
-                    "properties": {
-                        "hazard_version": {
-                            "type": "string",
-                            "description": "The version of the hazard schema.",
-                            "const": "0.0.1"
-                        },
-                        "id": {
-                            "type": "string",
-                            "description": "The identifier for the hazard.",
-                            "minLength": 1
-                        },
-                        "links": {
-                            "title": "Hazard Links",
-                            "description": "Links to hazard relations.",
-                            "type": "array",
-                            "items": {
-                                "$ref": "https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/link.yaml"
-                            }
-                        },
-                        "properties": {
-                            "type": "object",
-                            "properties": {
-                                "hazards": {
-                                    "type": "array",
-                                    "items": {
-                                        "$ref": "#/definitions/Hazard"
-                                    }
-                                }
-                            },
-                            "required": ["hazards"]
-                        }
-                    
-                    }
-                }
-            ]
+    "properties": {
+        "hazard_version": {
+            "type": "string",
+            "description": "The version of the hazard schema.",
+            "const": "0.0.1"
         },
-        "link": {
-            "type": "object",
-            "required": [
-                "rel",
-                "href"
-            ],
-            "properties": {
-                "href": {
-                    "title": "Link reference",
-                    "type": "string",
-                    "format": "iri-reference",
-                    "minLength": 1
+        "id": {
+            "type": "string",
+            "description": "The identifier for the hazard.",
+            "minLength": 1
+        },
+        "hazard_kind": {
+            "type": "string",
+            "description": "The kinf of hazard.",
+            "enum": ["chronic", "acute", "unknown"]
+        },
+        "name": {
+            "type": "string",
+            "description": "The name of the hazard."
+        },
+        "description": {
+            "type": "string",
+            "description": "A description of the hazard."
+        },
+        "links": {
+            "title": "Hazard Links",
+            "description": "Links to hazard relations.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "href": {
+                        "title": "Link reference",
+                        "type": "string",
+                        "format": "iri-reference",
+                        "minLength": 1
+                    },
+                    "rel": {
+                        "title": "Link relation type",
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "type": {
+                        "title": "Link type",
+                        "type": "string"
+                    },
+                    "title": {
+                        "title": "Link title",
+                        "type": "string"
+                    }
                 },
-                "rel": {
-                    "title": "Link relation type",
-                    "type": "string",
-                    "minLength": 1
-                },
-                "type": {
-                    "title": "Link type",
-                    "type": "string"
-                },
-                "title": {
-                    "title": "Link title",
-                    "type": "string"
-                }
+                "required": ["href", "rel"]
             }
         },
-        "Hazard": {
-        "type": "string",
-        "enum": ["chronic", "acute", "unknown"]
-      }
-    },
-    "properties": {
-      "hazards": {
-        "type": "array",
-        "items": {
-          "oneOf": [
-            { "$ref": "#/definitions/ChronicHeat" },
-            { "$ref": "#/definitions/Inundation" },
-            { "$ref": "#/definitions/Fire" }
-          ]
+        "vulnerability_model": {
+            "$ref": "vulnerability_model.json#/properties/details"
         }
-      }
-    },
-
-  }
-  
+    }
+}

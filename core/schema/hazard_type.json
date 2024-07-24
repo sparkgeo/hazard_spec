@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "./hazards.json",
+    "title": "Specific Hazards Schema",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "schema.json"
+        },
+        {
+            "properties": {
+                "hazard_type": {
+                    "type": "string",
+                    "enum": [
+                        "ChronicHeat",
+                        "AirTemperature",
+                        "ChronicWind",
+                        "CoastalInundation",
+                        "CombinedInundation",
+                        "Drought",
+                        "Fire",
+                        "Hail",
+                        "Hazard",
+                        "Inundation",
+                        "PluvialInundation",
+                        "Precipitation",
+                        "RiverineInundation",
+                        "WaterRisk",
+                        "WaterTemperature",
+                        "Wind"
+                    ]
+                }
+            }
+        }
+    ]
+}

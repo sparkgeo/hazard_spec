@@ -1,0 +1,23 @@
+{
+    "indicator_version": "0.0.1",
+    "id": "Indicator-1",
+    "description": "Mean degree days above 32°C.",
+    "name": "Mean Degree Days Above 32°C",
+    "units": "degree days",
+    "value": 250,
+    "links": [
+      {
+        "href": "./indicator-example.json",
+        "rel": "self",
+        "type": "application/json",
+        "title": "Mean Degree Days Above 32°C example"
+      },
+      {
+        "href": "./hazard-example.json",
+        "rel": "related",
+        "type": "application/json",
+        "title": "OS-C Chronic Heat example"
+      }
+    ]
+  }
+  
