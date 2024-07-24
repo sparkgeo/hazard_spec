@@ -12,7 +12,7 @@ A description of a Hazard can be found [here](https://github.com/os-climate/haza
 
 This repository contains the core specification, including the data schema.
 
-See the changelog for continuous updates
+See the [changelog](./CHANGELOG.md) for continuous updates
 
 ## Features
 
@@ -28,5 +28,5 @@ To integrate 3rd party indicators, we provide extensions to the indicator schema
 
 See below for metadata and project info:
 
-- Changelog
+- [Changelog](./CHANGELOG.md)
 - Development and Release process
