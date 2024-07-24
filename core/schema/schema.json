@@ -9,7 +9,7 @@
         "hazard_version": {
             "type": "string",
             "description": "The version of the hazard schema.",
-            "const": "0.0.1"
+            "const": "0.1.0"
         },
         "id": {
             "type": "string",
@@ -18,7 +18,7 @@
         },
         "hazard_kind": {
             "type": "string",
-            "description": "The kinf of hazard.",
+            "description": "The kind of hazard.",
             "enum": ["chronic", "acute", "unknown"]
         },
         "name": {

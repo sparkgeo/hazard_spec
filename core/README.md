@@ -1,6 +1,7 @@
 # OS-C Hazard Core Specification
 
-A hazard is a top-level grouping that captures indicators and models. A Hazard contains an array of links objects to other objects and can include additional metadata to describe the contained objects. 
+A hazard is a top-level grouping that captures datasets, indicators, and models. A Hazard contains an array of links objects to other objects and can include additional metadata to describe the contained objects.
+
 See [HAZARD.md](https://github.com/os-climate/hazard/blob/main/HAZARD.md#introduction-to-data-sets-for-hazard-models) for a succinct description of Hazard models
 
 > Introduction to data sets for hazard models
@@ -18,7 +19,7 @@ Hazards come in two varieties:
 >
 > 2. Return-period-based models, where the model rather provides the statistic properties of the ensemble of events.
 
-It is fully described in the [core specification](./core-spec.md) and [core schema](./schema/schema.json)
+These requriements are fully described in the [core specification](./core-spec.md) and [core schema](./schema/schema.json)
 
 The specification is currently filtered for the following hazard types:
 

@@ -28,15 +28,9 @@ A JSON object with the following required fields is a valid hazard object.
 This document describes the schema definitions and relationships for representing metadata about various hazards.
 ## Schema Files
 
-### 1. [`vulnerability_model.json`](./vulnerability_model.json)
+### [`vulnerability_model.json`](./schema/vulnerability_model.json)
 
 The `vulnerability_model.json` file defines the structure of the `vulnerability_model` property, which can represent event-based or return-period-based details.
-
-#### Properties
-
-| Field  | Type   | Description                               | Required |
-|--------|--------|-------------------------------------------|----------|
-| [`vulnerability_model`](./vulnerability_model.json) | object | One of event-based or return-period-based | Yes      |
 
 #### Event-based Details
 
@@ -62,11 +56,11 @@ The `schema.json` file defines the general structure for representing hazard met
 |----------------|--------|-----------------------------------------------|----------|
 | `hazard_version` | string | The version of the hazard schema              | Yes      |
 | `id`             | string | The identifier for the hazard                 | Yes      |
-| `hazard_kind`    | string | The kind of hazard                            | Yes      |
+| `hazard_kind`    | string | The kind of hazard. One of `chronic`, `acute`, or `unknown`                           | Yes      |
 | `name`           | string | The name of the hazard                        | Yes      |
 | `description`    | string | A description of the hazard                   | Yes      |
-| [`links`](#links-object)          | array  | Links to hazard relations                     | No       |
-| [`vulnerability_model`](./vulnerability_model.json)        | object | Event-based or return-period-based details    | No       |
+| links          | array of [`link objects`](#links-object)      | Links to hazard relations                     | No       |
+| vulnerability_model        | object |One of [event-based](/#Event-based-Details) or [return-period-based](/#return-period-Details) | No       |
 
 #### Links Object
 
@@ -85,7 +79,7 @@ The `hazard_type.json` file extends `schema.json` and restricts the `hazard_type
 
 | Field       | Type   | Description           | Required |
 |-------------|--------|-----------------------|----------|
-| `hazard_type` | string | The type of hazard    | Yes      |
+| `hazard_type` | string | The type of hazard. One of [Allowed Hazard Types](#allowed-hazard-types)    | Yes      |
 
 #### Allowed Hazard Types
 
