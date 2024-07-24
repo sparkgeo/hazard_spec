@@ -1,6 +1,6 @@
 # Hazard Core Specification
 
-This document explains the structure and content of a core hazard object. A Hazard objects represents a logical grouping of indicators and models alike. These items can and should be linked in one-to-many and many-to-many relationships.
+This document explains the structure and content of a core hazard object. Hazard objects represent a logical grouping of indicators and models. These items can and should be linked in one-to-many and many-to-many relationships.
 
 A hazard can be of three kinds:
 
@@ -13,9 +13,9 @@ Each hazard can be measured using two types of models:
 - Event-based models
 - Return-period models
 
-To build this core specification, we will define models for the different model types
+We will define models for the different model types to build this core specification.
 
-A JSON object that has the following require fields is a valid hazard object.
+A JSON object with the following required fields is a valid hazard object.
 
 - [Examples](../examples)
   - See an example for a [base hazard](../examples/hazard-example.json).
@@ -25,8 +25,7 @@ A JSON object that has the following require fields is a valid hazard object.
 
 ## Hazard Type Schema Specification
 
-This document describes the schema definitions and relationships for representing metadata about various types of hazards.
-
+This document describes the schema definitions and relationships for representing metadata about various hazards.
 ## Schema Files
 
 ### 1. [`vulnerability_model.json`](./vulnerability_model.json)
@@ -80,7 +79,7 @@ The `schema.json` file defines the general structure for representing hazard met
 
 ### 3. [`hazard_type.json`](./hazard_type.json)
 
-The `hazard_type.json` file extends `schema.json` and restricts the `hazard_type` to a specific list of predefined hazards. From this list indicators are grouped.
+The `hazard_type.json` file extends `schema.json` and restricts the `hazard_type` to a specific list of predefined hazards. From this list, indicators are grouped.
 
 #### Properties
 
