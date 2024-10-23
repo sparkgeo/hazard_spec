@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "./scenarios.json",
+    "title": "Climate Scenarios Schema",
+    "description": "This schema defines the different climate scenarios that can be applied to hazard models.",
+    "type": "string",
+    "enum": [
+      "historical",  // Past data or models
+      "rcp2p6",      // Representative Concentration Pathway 2.6
+      "rcp4p5",      // Representative Concentration Pathway 4.5
+      "rcp6p0",      // Representative Concentration Pathway 6.0
+      "rcp8p5",      // Representative Concentration Pathway 8.5
+      "ssp126",      // Shared Socioeconomic Pathway 1-2.6
+      "ssp245",      // Shared Socioeconomic Pathway 2-4.5
+      "ssp370",      // Shared Socioeconomic Pathway 3-7.0
+      "ssp585"       // Shared Socioeconomic Pathway 5-8.5
+    ]
+  }
+  

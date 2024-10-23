@@ -1,0 +1,80 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "./schema.json",
+    "title": "Chronic Heat Hazard Indicator Schema",
+    "type": "object",
+    "required": ["hazard_version", "id", "hazard_kind", "name", "description"],
+    "description": "This object represents the metadata for Chronic Heat hazards indicators.",
+    "properties": {
+        "indicator": {
+            "title": "Chronic Heat Hazard Indicator",
+            "type": "string",
+            "oneOf": [
+                {
+                    "title": "Mean degree days above 32\u00b0C",
+                    "const": "chronic_heat_osc_v2_mean_degree_days_v2_above_32c"
+                },
+                {
+                    "title": "Days per year above 35\u00b0C (Jupiter)",
+                    "const": "chronic_heat_jupiter_v1_days_above_35c"
+                },
+                {
+                    "title": "Mean work loss, low intensity",
+                    "const": "chronic_heat_osc_v2_mean_work_loss_low"
+                },
+                {
+                    "title": "Mean work loss, medium intensity",
+                    "const": "chronic_heat_osc_v2_mean_work_loss_medium"
+                },
+                {
+                    "title": "Mean work loss, high intensity",
+                    "const": "chronic_heat_osc_v2_mean_work_loss_high"
+                },
+                {
+                    "title": "Days with average temperature above 25\u00b0C",
+                    "const": "chronic_heat_osc_v2_days_tas_above_25c"
+                },
+                {
+                    "title": "Days with average temperature above 30\u00b0C",
+                    "const": "chronic_heat_osc_v2_days_tas_above_30c"
+                },
+                {
+                    "title": "Days with average temperature above 35\u00b0C",
+                    "const": "chronic_heat_osc_v2_days_tas_above_35c"
+                },
+                {
+                    "title": "Days with average temperature above 40\u00b0C",
+                    "const": "chronic_heat_osc_v2_days_tas_above_40c"
+                },
+                {
+                    "title": "Days with average temperature above 45\u00b0C",
+                    "const": "chronic_heat_osc_v2_days_tas_above_45c"
+                },
+                {
+                    "title": "Days with average temperature above 50\u00b0C",
+                    "const": "chronic_heat_osc_v2_days_tas_above_50c"
+                },
+                {
+                    "title": "Days with average temperature above 55\u00b0C",
+                    "const": "chronic_heat_osc_v2_days_tas_above_55c"
+                },
+                {
+                    "title": "Mean degree days above index value",
+                    "const": "chronic_heat_osc_v2_mean_degree_days_above_index"
+                },
+                {
+                    "title": "Mean degree days below index value",
+                    "const": "chronic_heat_osc_v2_mean_degree_days_below_index"
+                },
+                {
+                    "title": "Weeks with average water temperature above threshold in \u00b0C",
+                    "const": "chronic_heat_nluu_v2_weeks_water_temp_above"
+                },
+                {
+                    "title": "Days with wet-bulb globe temperature above threshold in \u00b0C",
+                    "const": "chronic_heat_osc_v2_days_wbgt_above"
+                }
+            ]
+        }
+    }
+}
